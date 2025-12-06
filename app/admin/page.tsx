@@ -239,11 +239,53 @@ export default function AdminPage() {
                                 </div>
                                 <div>
                                     <label className="text-sm font-medium mb-1 block">프로필 이미지 URL</label>
-                                    <input
-                                        value={member.imageUrl}
-                                        onChange={(e) => handleTeamChange(index, 'imageUrl', e.target.value)}
-                                        className="w-full border rounded px-3 py-2 text-sm"
-                                    />
+                                    <div className="flex gap-2">
+                                        <input
+                                            value={member.imageUrl}
+                                            onChange={(e) => handleTeamChange(index, 'imageUrl', e.target.value)}
+                                            className="flex-1 border rounded px-3 py-2 text-sm"
+                                            placeholder="/images/..."
+                                        />
+                                        <div className="relative">
+                                            <input
+                                                type="file"
+                                                id={`upload-${member.id}`}
+                                                className="hidden"
+                                                accept="image/*"
+                                                onChange={async (e) => {
+                                                    const file = e.target.files?.[0];
+                                                    if (!file) return;
+
+                                                    const formData = new FormData();
+                                                    formData.append('file', file);
+
+                                                    try {
+                                                        const res = await fetch('/api/upload', {
+                                                            method: 'POST',
+                                                            body: formData,
+                                                        });
+                                                        const data = await res.json();
+                                                        if (data.success) {
+                                                            handleTeamChange(index, 'imageUrl', data.url);
+                                                        } else {
+                                                            alert('Upload failed: ' + data.message);
+                                                        }
+                                                    } catch (err) {
+                                                        alert('Upload error');
+                                                        console.error(err);
+                                                    }
+                                                }}
+                                            />
+                                            <Button
+                                                variant="outline"
+                                                size="sm"
+                                                onClick={() => document.getElementById(`upload-${member.id}`)?.click()}
+                                                type="button"
+                                            >
+                                                업로드
+                                            </Button>
+                                        </div>
+                                    </div>
                                 </div>
                             </CardContent>
                         </Card>

@@ -1,8 +1,17 @@
-import content from "@/data/content.json"
+import { promises as fs } from 'fs';
+import path from 'path';
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
+export const dynamic = 'force-dynamic';
 
-export default function TeamPage() {
+async function getContent() {
+    const filePath = path.join(process.cwd(), 'src', 'data', 'content.json');
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(fileContent);
+}
+
+export default async function TeamPage() {
+    const content = await getContent();
     const { team } = content as { team: { id: string; name: string; role: string; bio: string; phone?: string; imageUrl: string; }[] }
 
     return (

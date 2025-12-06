@@ -1,11 +1,38 @@
 import Link from "next/link"
+import { promises as fs } from 'fs';
+import path from 'path';
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { ArrowRight, BarChart3, Building2, Users, FileText, TrendingUp, ShieldCheck } from "lucide-react"
-import content from "@/data/content.json"
 
-export default function Home() {
-    const { services, news } = content
+export const dynamic = 'force-dynamic';
+
+async function getContent() {
+    const filePath = path.join(process.cwd(), 'src', 'data', 'content.json');
+    const fileContent = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(fileContent);
+}
+
+type Service = {
+    id: string;
+    title: string;
+    description: string;
+}
+
+type NewsItem = {
+    id: string;
+    title: string;
+    summary: string;
+    date: string;
+    link: string;
+    category: string;
+}
+
+export default async function Home() {
+    const content = await getContent();
+    // Validate and cast content
+    const services = (content.services || []) as Service[];
+    const news = (content.news || []) as NewsItem[];
 
     return (
         <div className="flex flex-col gap-16 pb-16">

@@ -44,7 +44,7 @@ export default function AdminPage() {
 
     const [team, setTeam] = useState<TeamMember[]>([])
     const [news, setNews] = useState<NewsItem[]>([])
-    const [services, setServices] = useState<any[]>([])
+    const [services, setServices] = useState<unknown[]>([])
     const [inquiries, setInquiries] = useState<Inquiry[]>([])
 
     const [loading, setLoading] = useState(false)

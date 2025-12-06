@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CheckCircle2, ArrowRight, X, Check, ArrowLeft } from "lucide-react"
-import { Progress } from "@/components/ui/progress"  // Assuming basic Progress exists or I use a simple div
+// import { Progress } from "@/components/ui/progress"
 
 const CHECKLIST_ITEMS = [
     "법인 설립 시 발기인수를 맞추기 위해 타인을 주주로 등록 하셨습니까?",

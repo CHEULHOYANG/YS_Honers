@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 
 export default function TeamPage() {
-    const { team } = content
+    const { team } = content as { team: { id: string; name: string; role: string; bio: string; phone?: string; imageUrl: string; }[] }
 
     return (
         <div className="container mx-auto px-4 py-16">

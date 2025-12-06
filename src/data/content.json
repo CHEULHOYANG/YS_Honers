@@ -1,0 +1,61 @@
+{
+  "team": [
+    {
+      "id": "yang",
+      "name": "양철호",
+      "role": "(수석팀장) Senior Team Leader",
+      "bio": "삼성SDS, 하나은행, 삼성카드 33년 근무. IT, 매출, 회계 및 포인트 경험. 보안관리 담당 유경험. 국방부 LMS 시스템 개발.",
+      "imageUrl": "/images/placeholder-yang.jpg"
+    },
+    {
+      "id": "seo",
+      "name": "서은정",
+      "role": "(팀장) Team Leader",
+      "bio": "HSBC, 삼성생명, 삼성화재 재무설계 20년 경력. 변액연금, 펀드, M&A 전문 자격증 보유.",
+      "imageUrl": "/images/placeholder-seo.jpg"
+    }
+  ],
+  "news": [
+    {
+      "id": "1",
+      "title": "2025년 하반기 세법개정안 완벽 대비! 삼성패밀리오피스 자산관리 세미나",
+      "summary": "대표님 필독! 2025년 하반기 변화하는 세법에 대비하기 위한 자산관리 세미나에 초대합니다.",
+      "date": "2025-08-04",
+      "link": "https://blog.naver.com/ssneobiz",
+      "category": "세미나"
+    },
+    {
+      "id": "2",
+      "title": "대표님의 '가업(家業)', 100년 기업의 초석을 다지는 지혜",
+      "summary": "가업승계 절차와 전략, 그리고 100년 기업을 위한 경영 철학에 대해 논의합니다.",
+      "date": "2025-06-12",
+      "link": "https://blog.naver.com/ssneobiz",
+      "category": "가업승계"
+    },
+    {
+      "id": "3",
+      "title": "디자인 파트타임 직원 모집",
+      "summary": "함께 성장할 유능한 디자인 파트타임 직원을 모집합니다.",
+      "date": "2025-06-04",
+      "link": "https://blog.naver.com/ssneobiz",
+      "category": "채용"
+    }
+  ],
+  "services": [
+    {
+      "id": "consulting",
+      "title": "경영지원 컨설팅",
+      "description": "법인전환, 제도정비, 가업승계 등 기업 경영에 필요한 맞춤형 솔루션을 제공합니다."
+    },
+    {
+      "id": "finance",
+      "title": "자금/투자 자문",
+      "description": "운전자금 확보, 정책자금 활용, 투자 포트폴리오 구성을 통한 자산 증대를 지원합니다."
+    },
+    {
+      "id": "tax",
+      "title": "세무/노무 관리",
+      "description": "절세 전략 수립, 노무 리스크 관리, 4대보험 최적화 등 실질적인 경영 효율화를 돕습니다."
+    }
+  ]
+}

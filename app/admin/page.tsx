@@ -52,11 +52,17 @@ export default function AdminPage() {
     // Load initial data
     useEffect(() => {
         if (isAuthenticated) {
-            import("@/data/content.json").then((data) => {
-                setTeam(data.team)
-                setNews(data.news)
-                setServices(data.services)
-            })
+            // Fetch latest content from API (bypassing static build cache)
+            fetch('/api/content')
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        setTeam(data.team || [])
+                        setNews(data.news || [])
+                        setServices(data.services || [])
+                    }
+                })
+                .catch(err => console.error("Failed to load content:", err))
 
             fetch('/api/inquiry')
                 .then(res => res.json())

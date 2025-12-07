@@ -18,11 +18,12 @@
   "news": [
     {
       "id": "1",
-      "title": "2025년 하반기 세법개정안 완벽 대비! 삼성패밀리오피스 자산관리 세미나",
-      "summary": "대표님 필독! 2025년 하반기 변화하는 세법에 대비하기 위한 자산관리 세미나에 초대합니다.",
+      "title": "부모님이 자녀 증여세 대신 내주면?",
+      "summary": "증여세 대납' 행위는 또 다른 증여로 간주되어 추가적인 증여세가 부과될 수 있습니다
+",
       "date": "2025-08-04",
       "link": "https://blog.naver.com/ssneobiz",
-      "category": "세미나"
+      "category": "증여세"
     },
     {
       "id": "2",
@@ -34,11 +35,11 @@
     },
     {
       "id": "3",
-      "title": "디자인 파트타임 직원 모집",
-      "summary": "함께 성장할 유능한 디자인 파트타임 직원을 모집합니다.",
-      "date": "2025-06-04",
-      "link": "https://blog.naver.com/ssneobiz",
-      "category": "채용"
+      "title": "장롱 속 금팔면 세금 낼까? ",
+      "summary": "장롱 속 개인 소장 금, 팔면 양도소득세 낼까? "원칙적으로 NO!",
+      "date": "2025-05-12",
+      "link": "https://blog.naver.com/ssneobiz/223862608068",
+      "category": "세"
     }
   ],
   "services": [

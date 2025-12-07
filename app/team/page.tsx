@@ -56,7 +56,7 @@ export default async function TeamPage() {
                         <div className="bg-slate-50 px-8 py-4 border-t border-slate-100 flex gap-2 flex-wrap">
                             {member.name.includes("양철호") && (
                                 <>
-                                    <span className="px-2 py-1 bg-white border rounded text-xs text-slate-500">삼성SDS 33년</span>
+                                    <span className="px-2 py-1 bg-white border rounded text-xs text-slate-500">삼성SDS </span>
                                     <span className="px-2 py-1 bg-white border rounded text-xs text-slate-500">IT/회계/보안</span>
                                     <span className="px-2 py-1 bg-white border rounded text-xs text-slate-500">국방부 LMS</span>
                                 </>

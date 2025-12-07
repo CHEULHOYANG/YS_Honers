@@ -3,7 +3,7 @@ import path from 'path';
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export const dynamic = 'force-dynamic';
-
+ 
 async function getContent() {
     const filePath = path.join(process.cwd(), 'src', 'data', 'content.json');
     const fileContent = await fs.readFile(filePath, 'utf-8');
